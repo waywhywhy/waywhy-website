@@ -2,7 +2,7 @@
 
 waydlp runs on **Windows**, **Linux** and **Android**. Every release file is published on GitHub Releases together with a `SHA256SUMS.txt` file, and the [download page](/download) lists them automatically.
 
-> No release has been published yet while waydlp is in early development. Until then you can [build it from source](/docs/building-from-source).
+> Published builds and SHA-256 checksums are listed on the [download page](/download). You can also [build from source](/docs/building-from-source).
 
 ## Which file should I pick?
 
