@@ -63,7 +63,7 @@ export function ButtonLink({
 
 export function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <div className={`rounded-[--radius-card] border border-border bg-surface p-6 ${className}`}>
+    <div className={`min-w-0 rounded-[--radius-card] border border-border bg-surface p-6 ${className}`}>
       {children}
     </div>
   );
