@@ -10,6 +10,29 @@ The Android app is a native Flutter app (not a website wrapper). It downloads **
 
 Verify the checksum if you downloaded the APK on another device. Releases are signed with the waydlp release key; Android refuses updates signed with a different key.
 
+## Install and update with Obtainium
+
+[Add waydlp to Obtainium](https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22io.github.waywhywhy.waydlp%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fwaywhywhy%2Fwaydlp-mobile-dart%22%2C%22author%22%3A%22waywhywhy%22%2C%22name%22%3A%22waydlp%22%2C%22additionalSettings%22%3A%22%7B%5C%22apkFilterRegEx%5C%22%3A%5C%22%5Ewaydlp-.%2A-android-universal%5B.%5Dapk%24%5C%22%2C%5C%22includePrereleases%5C%22%3Afalse%2C%5C%22autoApkFilterByArch%5C%22%3Afalse%2C%5C%22verifyLatestTag%5C%22%3Atrue%7D%22%7D) on your Android device, confirm the
+configuration import, then check for updates to install waydlp. If you do not
+have Obtainium yet, the link offers its installation page.
+
+The configuration follows stable GitHub releases and selects the universal APK
+for ARM64, ARMv7 and x64. Existing installations from GitHub Releases can be
+updated with the same signing key. Update notifications and background installation
+depend on your Obtainium settings and Android permissions.
+
+For manual setup, add `https://github.com/waywhywhy/waydlp-mobile-dart` in Obtainium,
+leave **Include pre-releases** off, enable **Verify latest tag**, and set
+**Filter APKs by Regular Expression** to:
+
+```regex
+^waydlp-.*-android-universal[.]apk$
+```
+
+You can also download [obtainium.json](https://raw.githubusercontent.com/waywhywhy/waydlp-mobile-dart/main/obtainium.json)
+and import it from Obtainium's Import/Export page. The universal APK is larger
+than an architecture-specific download, but avoids choosing a variant each time.
+
 ## Sharing links to waydlp
 
 In YouTube, your browser or any other app, tap **Share → waydlp**. waydlp opens with the link and analyses it.

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DownloadPicker } from "@/components/download-picker";
-import { Card, Code, PageHeader } from "@/components/ui";
+import { ButtonLink, Card, Code, PageHeader } from "@/components/ui";
+import { obtainiumImportUrl } from "@/lib/obtainium";
 import { getLatestRelease } from "@/lib/releases";
 import { gh, site } from "@/lib/site";
 
@@ -35,6 +36,23 @@ export default async function DownloadPage() {
       />
 
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
+        <Card>
+          <h2 className="text-lg font-semibold">Android updates with Obtainium</h2>
+          <p className="mt-2 text-sm text-fg-2">
+            Install waydlp and track stable updates directly from GitHub Releases with Obtainium. This
+            configuration selects the universal APK for ARM64, ARMv7 and x64 devices.
+          </p>
+          <div className="mt-4">
+            <ButtonLink href={obtainiumImportUrl}>Add to Obtainium</ButtonLink>
+          </div>
+          <p className="mt-3 text-sm text-fg-2">
+            Confirm the import in Obtainium, then check for updates to install. See the{" "}
+            <Link href="/docs/android" className="text-accent hover:underline">
+              Android guide
+            </Link>{" "}
+            for manual setup.
+          </p>
+        </Card>
         <Card>
           <h2 className="text-lg font-semibold">Arch Linux, CachyOS, EndeavourOS, Manjaro</h2>
           <p className="mt-2 text-sm text-fg-2">
