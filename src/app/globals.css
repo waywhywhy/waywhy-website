@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+/* waydlp design tokens — shared with the desktop and Android apps. */
+@theme {
+  --color-bg: #000000;
+  --color-bg-2: #080808;
+  --color-bg-3: #101010;
+  --color-surface: #121212;
+  --color-surface-2: #1a1a1a;
+  --color-accent: #9d4edd;
+  --color-accent-2: #7b2cbf;
+  --color-accent-hover: #b56bff;
+  --color-accent-dark: #5a189a;
+  --color-fg: #ffffff;
+  --color-fg-2: #a1a1aa;
+  --color-fg-muted: #71717a;
+  --color-border: #242424;
+  --color-border-accent: #7b2cbf;
+  --color-success: #22c55e;
+  --color-warning: #eab308;
+  --color-error: #ef4444;
+
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
+
+  --radius-card: 1rem;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-accent-dark);
+  color: var(--color-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-hover);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* A single, subtle glow behind the hero — cheap to render. */
+.hero-glow {
+  background: radial-gradient(60% 50% at 50% 0%, rgb(157 78 221 / 0.22), transparent 70%);
+}
+
+/* Rendered markdown (docs). */
+.prose-waydlp {
+  color: var(--color-fg-2);
+  line-height: 1.75;
+}
+.prose-waydlp h1 {
+  color: var(--color-fg);
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+.prose-waydlp h2 {
+  color: var(--color-fg);
+  font-size: 1.5rem;
+  font-weight: 650;
+  margin: 2.25rem 0 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+}
+.prose-waydlp h3 {
+  color: var(--color-fg);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+}
+.prose-waydlp p,
+.prose-waydlp ul,
+.prose-waydlp ol,
+.prose-waydlp table,
+.prose-waydlp pre,
+.prose-waydlp blockquote {
+  margin: 0.85rem 0;
+}
+.prose-waydlp ul {
+  list-style: disc;
+  padding-left: 1.4rem;
+}
+.prose-waydlp ol {
+  list-style: decimal;
+  padding-left: 1.4rem;
+}
+.prose-waydlp li {
+  margin: 0.25rem 0;
+}
+.prose-waydlp a {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-waydlp strong {
+  color: var(--color-fg);
+}
+.prose-waydlp code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.1rem 0.35rem;
+  color: var(--color-fg);
+}
+.prose-waydlp pre {
+  background: var(--color-bg-3);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+}
+.prose-waydlp pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+.prose-waydlp table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  display: block;
+  overflow-x: auto;
+}
+.prose-waydlp th,
+.prose-waydlp td {
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.prose-waydlp th {
+  color: var(--color-fg);
+  background: var(--color-surface);
+}
+.prose-waydlp blockquote {
+  border-left: 3px solid var(--color-accent-2);
+  padding-left: 1rem;
+  color: var(--color-fg-2);
+}
