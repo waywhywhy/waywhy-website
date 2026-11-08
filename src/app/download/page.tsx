@@ -64,16 +64,24 @@ flatpak run io.github.waywhywhy.waydlp`}</Code>
         <Card>
           <h2 className="text-lg font-semibold">Command-line installer</h2>
           <p className="mt-2 text-sm text-fg-2">
-            <code className="font-mono">waydlp-installer</code> ships in the portable archives. It detects
-            your system, verifies checksums and hands system packages to your package manager.
+            Install from your terminal on Windows or Linux. The bootstrap detects x64/ARM64, verifies
+            checksums and installs the desktop app and CLI for your user without admin access.
           </p>
           <div className="mt-3">
-            <Code>{`waydlp-installer detect
-waydlp-installer install            # best format for this system
-waydlp-installer install --format deb
-waydlp-installer verify
-waydlp-installer uninstall`}</Code>
+            <Code>{`# Windows (PowerShell)
+& ([scriptblock]::Create((irm 'https://github.com/waywhywhy/waydlp-desktop-rust/releases/latest/download/install.ps1')))`}</Code>
           </div>
+          <div className="mt-3">
+            <Code>{`# Linux
+curl -fsSL https://github.com/waywhywhy/waydlp-desktop-rust/releases/latest/download/install.sh -o install-waydlp.sh && sh install-waydlp.sh`}</Code>
+          </div>
+          <p className="mt-3 text-sm text-fg-2">
+            The script prints launch, verify and uninstall commands. See the{" "}
+            <Link href="/docs/installation" className="text-accent hover:underline">
+              installation guide
+            </Link>{" "}
+            for custom folders and pinned versions.
+          </p>
         </Card>
         <Card>
           <h2 className="text-lg font-semibold">Verify your download</h2>

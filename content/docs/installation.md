@@ -35,6 +35,44 @@ Get-FileHash .\waydlp-1.0.0-windows-x64-setup.exe -Algorithm SHA256
 
 ## The command-line installer
 
+Install the latest stable desktop release directly from a terminal. These scripts detect
+x64 or ARM64, verify SHA-256 checksums and install for your user without admin access.
+
+**Windows (PowerShell):**
+
+```powershell
+& ([scriptblock]::Create((irm 'https://github.com/waywhywhy/waydlp-desktop-rust/releases/latest/download/install.ps1')))
+```
+
+**Linux (requires curl and sha256sum):**
+
+```sh
+curl -fsSL https://github.com/waywhywhy/waydlp-desktop-rust/releases/latest/download/install.sh -o install-waydlp.sh && sh install-waydlp.sh
+```
+
+The default install folder is `%LOCALAPPDATA%\Programs\waydlp` on Windows or
+`~/.local/opt/waydlp` on Linux. A menu entry is created, and the script prints the
+full commands to launch the app, use the CLI, verify files and uninstall. PATH and
+shell profiles are left unchanged. Run the same command again to upgrade.
+
+You can also download and inspect [install.ps1](https://github.com/waywhywhy/waydlp-desktop-rust/blob/main/install.ps1)
+or [install.sh](https://github.com/waywhywhy/waydlp-desktop-rust/blob/main/install.sh), then choose a version and folder:
+
+```powershell
+.\install.ps1 -Version 0.1.0 -InstallDir 'C:\Tools\waydlp' -NoMenu
+& 'C:\Tools\waydlp\waydlp-installer.exe' verify
+& 'C:\Tools\waydlp\waydlp-installer.exe' uninstall
+```
+
+```sh
+sh install.sh --version 0.1.0 --dir "$HOME/Apps/waydlp" --no-menu
+"$HOME/Apps/waydlp/waydlp-installer" verify
+"$HOME/Apps/waydlp/waydlp-installer" uninstall
+```
+
+Use `-DesktopShortcut` (Windows) or `--desktop-shortcut` (Linux) for a desktop icon.
+The bootstrap installs the desktop app and CLI from the Windows ZIP or Linux tar archive.
+
 The portable archives include `waydlp-installer`, which picks the best format for your system, downloads it from GitHub Releases, verifies the checksum and installs it:
 
 ```bash
