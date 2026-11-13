@@ -45,9 +45,13 @@ By default, downloads go to **Download/waydlp** and appear in your gallery and m
 
 Downloads continue while you use other apps, shown in a notification with progress (tap it to open the queue). Android may ask you to allow notifications. You can restrict downloads to Wi-Fi in Settings.
 
+Downloads keep going after you leave the app with Back; History shows their result when you return. The Queue menu (⋮) has **Pause all**, **Resume all** and **Retry failed**. If Android's background time limit is reached, running downloads are paused with a notification and can be resumed.
+
 ## Updating yt-dlp on Android
 
-Sites change often. Open **Settings → yt-dlp** and tap **Update** to fetch the latest yt-dlp version into the app.
+Sites change often and block old yt-dlp versions (YouTube typically answers with _HTTP Error 403_). With **Settings → yt-dlp → Update automatically** (on by default), waydlp updates yt-dlp at most once a day, and once more when a download fails because yt-dlp is outdated, then retries that download. It respects **Wi-Fi only**.
+
+You can also tap **Update yt-dlp** at any time. Home shows a warning when the installed yt-dlp is more than 90 days old.
 
 ## Limitations
 

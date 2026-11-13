@@ -59,13 +59,13 @@ You can also download and inspect [install.ps1](https://github.com/waywhywhy/way
 or [install.sh](https://github.com/waywhywhy/waydlp-desktop-rust/blob/main/install.sh), then choose a version and folder:
 
 ```powershell
-.\install.ps1 -Version 0.1.0 -InstallDir 'C:\Tools\waydlp' -NoMenu
+.\install.ps1 -Version 0.2.0 -InstallDir 'C:\Tools\waydlp' -NoMenu
 & 'C:\Tools\waydlp\waydlp-installer.exe' verify
 & 'C:\Tools\waydlp\waydlp-installer.exe' uninstall
 ```
 
 ```sh
-sh install.sh --version 0.1.0 --dir "$HOME/Apps/waydlp" --no-menu
+sh install.sh --version 0.2.0 --dir "$HOME/Apps/waydlp" --no-menu
 "$HOME/Apps/waydlp/waydlp-installer" verify
 "$HOME/Apps/waydlp/waydlp-installer" uninstall
 ```

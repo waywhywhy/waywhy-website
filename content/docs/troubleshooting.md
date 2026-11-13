@@ -2,25 +2,25 @@
 
 waydlp translates errors into plain language. Here is what each message means and what to try. The **Technical details** section of an error contains the exact yt-dlp output — include it when asking for help.
 
-| Message                                            | What it means                               | What to do                                                                    |
-| -------------------------------------------------- | ------------------------------------------- | ----------------------------------------------------------------------------- |
-| **This link isn't supported**                      | yt-dlp doesn't recognise the site or page.  | Check the link; see Supported Websites; try the page's direct video link.     |
-| **The media is unavailable**                       | Removed, deleted or made unavailable.       | Nothing to do on your side.                                                   |
-| **The media is private**                           | Only invited accounts can see it.           | Use a cookies file for an account that has access.                            |
-| **Sign-in required** / **Age-restricted content**  | The site requires a logged-in account.      | Provide a cookies file — only for your own account.                           |
-| **Not available in your region**                   | Geo-restricted by the uploader.             | A proxy can be configured, where lawful.                                      |
-| **The live stream hasn't started**                 | Scheduled premiere/live event.              | Try again when it's live.                                                     |
-| **DRM-protected content**                          | Encrypted media (e.g. streaming services).  | Not supported, and never will be.                                             |
-| **yt-dlp may be out of date**                      | The site changed and yt-dlp can't read it.  | Update yt-dlp (Settings → yt-dlp & FFmpeg), then retry.                       |
-| **The site is rate-limiting requests**             | Too many requests (HTTP 429).               | Wait; reduce simultaneous downloads; waydlp retries automatically.            |
-| **FFmpeg is required**                             | Merging/conversion/embedding needs FFmpeg.  | Install FFmpeg or use _Original file_.                                        |
-| **The selected format isn't available**            | The chosen format/quality no longer exists. | Analyse again and choose a listed option.                                     |
-| **The disk is full**                               | No space left.                              | Free space or choose another folder.                                          |
-| **Permission denied**                              | waydlp can't write to the folder.           | Choose a folder you own (e.g. Downloads).                                     |
-| **Invalid output location**                        | Folder or file name problem.                | Check the download folder and file-name template.                             |
-| **Network problem** / **The connection timed out** | Connection failed.                          | Check your internet; a proxy/VPN may interfere. waydlp retries automatically. |
-| **Conversion failed**                              | FFmpeg couldn't produce the file.           | Try another format; disable re-encoding; update FFmpeg.                       |
-| **yt-dlp was not found**                           | No yt-dlp installation detected.            | Install it from Settings.                                                     |
+| Message                                            | What it means                                                                                   | What to do                                                                                                   |
+| -------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **This link isn't supported**                      | yt-dlp doesn't recognise the site or page.                                                      | Check the link; see Supported Websites; try the page's direct video link.                                    |
+| **The media is unavailable**                       | Removed, deleted or made unavailable.                                                           | Nothing to do on your side.                                                                                  |
+| **The media is private**                           | Only invited accounts can see it.                                                               | Use a cookies file for an account that has access.                                                           |
+| **Sign-in required** / **Age-restricted content**  | The site requires a logged-in account.                                                          | Provide a cookies file — only for your own account.                                                          |
+| **Not available in your region**                   | Geo-restricted by the uploader.                                                                 | A proxy can be configured, where lawful.                                                                     |
+| **The live stream hasn't started**                 | Scheduled premiere/live event.                                                                  | Try again when it's live.                                                                                    |
+| **DRM-protected content**                          | Encrypted media (e.g. streaming services).                                                      | Not supported, and never will be.                                                                            |
+| **yt-dlp may be out of date**                      | The site changed and yt-dlp can't read it, or it rejects old versions (often _HTTP Error 403_). | Update yt-dlp (Settings → yt-dlp & FFmpeg), then retry. Use **Retry failed** in the queue to retry them all. |
+| **The site is rate-limiting requests**             | Too many requests (HTTP 429).                                                                   | Wait; reduce simultaneous downloads; waydlp retries automatically.                                           |
+| **FFmpeg is required**                             | Merging/conversion/embedding needs FFmpeg.                                                      | Install FFmpeg or use _Original file_.                                                                       |
+| **The selected format isn't available**            | The chosen format/quality no longer exists.                                                     | Analyse again and choose a listed option.                                                                    |
+| **The disk is full**                               | No space left.                                                                                  | Free space or choose another folder.                                                                         |
+| **Permission denied**                              | waydlp can't write to the folder.                                                               | Choose a folder you own (e.g. Downloads).                                                                    |
+| **Invalid output location**                        | Folder or file name problem.                                                                    | Check the download folder and file-name template.                                                            |
+| **Network problem** / **The connection timed out** | Connection failed.                                                                              | Check your internet; a proxy/VPN may interfere. waydlp retries automatically.                                |
+| **Conversion failed**                              | FFmpeg couldn't produce the file.                                                               | Try another format; disable re-encoding; update FFmpeg.                                                      |
+| **yt-dlp was not found**                           | No yt-dlp installation detected.                                                                | Install it from Settings.                                                                                    |
 
 ## Other problems
 

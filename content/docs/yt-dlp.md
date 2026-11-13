@@ -29,6 +29,8 @@ Websites change frequently, and yt-dlp releases fixes often. If downloads from a
 1. Open **Settings → yt-dlp & FFmpeg**.
 2. Press **Check latest version**, then **Update yt-dlp**.
 
+Home and the Downloader show a warning when the yt-dlp in use is more than 90 days old (yt-dlp's own limit), with a button to update it; `waydlp-cli tools` prints the same warning. To update the managed copy automatically, turn on **Settings → Privacy → Keep yt-dlp up to date automatically**. It is off by default and contacts GitHub at most once a day. On Android, automatic updates are on by default; see [waydlp on Android](/docs/android).
+
 A managed update downloads the official build for your platform from yt-dlp's GitHub releases and **verifies its SHA-256** against the checksum file published in the same release before replacing the old copy. If you use a system copy, update it with the tool you installed it with; waydlp never modifies it (you can also install a managed copy that takes priority).
 
 _Current limitation:_ the GPG signature of yt-dlp's checksum file is not verified yet; integrity relies on the checksum and GitHub's HTTPS certificate.
